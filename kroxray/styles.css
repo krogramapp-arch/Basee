@@ -1,0 +1,248 @@
+:root {
+  --bg: #f5f8f6;
+  --ink: #1b2623;
+  --muted: #697771;
+  --green: #007e65;
+  --green-soft: #dff5ef;
+  --card: #ffffff;
+  --panel: #1b2623;
+  --line: #dfe7e4;
+  --danger: #dd5844;
+  --danger-soft: #ffe8e3;
+  --shadow: 0 20px 50px rgba(17, 26, 24, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background: linear-gradient(180deg, #f1f7f3 0%, #edf3f0 100%);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: var(--ink);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px 60px;
+}
+
+.page-shell {
+  width: min(100%, 520px);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  color: white;
+  background: linear-gradient(135deg, #11a380, #006f5c);
+  box-shadow: 0 10px 22px rgba(0, 126, 101, 0.28);
+}
+
+.brand-copy h1 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.brand-copy p {
+  margin: 2px 0 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.plan-pill {
+  background: var(--green-soft);
+  color: var(--green);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.phone-frame {
+  background: rgba(255,255,255,0.38);
+  border: 1px solid rgba(124, 145, 136, 0.18);
+  border-radius: 26px;
+  padding: 18px 16px 12px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
+}
+
+.connection-panel {
+  background: var(--panel);
+  color: white;
+  border-radius: 18px;
+  padding: 18px 18px 16px;
+  margin-bottom: 24px;
+}
+
+.status-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  color: rgba(255,255,255,0.9);
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f4ba48;
+  display: inline-block;
+}
+
+.status-text {
+  flex: 1;
+  font-weight: 700;
+}
+
+.vpn-tag {
+  color: rgba(191, 208, 200, 0.9);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+}
+
+.server-block label {
+  display: block;
+  color: rgba(171, 190, 182, 1);
+  font-size: 0.7rem;
+  margin-bottom: 6px;
+}
+
+.server-block h2 {
+  margin: 0 0 18px;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.connect-btn {
+  width: 100%;
+  border: 0;
+  background: linear-gradient(135deg, var(--green), #0d8d73);
+  color: white;
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 12px 20px rgba(0, 126, 101, 0.25);
+}
+
+.info-text {
+  margin: 12px 0 0;
+  color: rgba(190, 202, 196, 0.9);
+  font-size: 0.72rem;
+  line-height: 1.7;
+}
+
+.profiles-box {
+  background: transparent;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-inline: 2px;
+}
+
+.section-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--ink);
+}
+
+.section-header span {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.action-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.secondary-btn,
+.danger-btn {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.secondary-btn {
+  background: white;
+  color: var(--green);
+}
+
+.danger-btn {
+  background: var(--danger-soft);
+  border-color: #f1d4cf;
+  color: var(--danger);
+}
+
+.profile-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.empty-state {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--muted);
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 0.95rem;
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.72rem;
+  margin-top: 22px;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 24px;
+  }
+
+  .topbar {
+    margin-bottom: 12px;
+  }
+
+  .brand-copy h1 {
+    font-size: 1.6rem;
+  }
+}
