@@ -1,0 +1,4 @@
+kroxray/**/*.aar filter=lfs diff=lfs merge=lfs -text
+kroxray/**/*.apk filter=lfs diff=lfs merge=lfs -text
+kroxray/**/*.so filter=lfs diff=lfs merge=lfs -text
+kroxray/**/*.jar filter=lfs diff=lfs merge=lfs -text
